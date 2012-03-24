@@ -41,6 +41,7 @@ TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("two zero base-5", number_to_speech(20));
     EXPECT_STREQ ("two one base-5", number_to_speech(21));
     EXPECT_STREQ ("three zero base-5", number_to_speech(30));
+    EXPECT_STREQ ("four zero base-5", number_to_speech(40));
 }
 
 int main (int argc, char *argv[])
