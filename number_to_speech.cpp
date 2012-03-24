@@ -24,18 +24,9 @@ const char *number_to_speech (int number) {
     if (number < 10)
         result = digit_to_speech (number);
 
-    else if (number >= 40) {
-        result = digit_to_speech (4) + digit_to_speech( number - 4 * 10 );
-    }
-    else if (number >= 30) {
-        result = digit_to_speech (3) + digit_to_speech( number - 3 * 10 );
-    }
-    else if (number >= 20) {
-        result = digit_to_speech (2) + digit_to_speech( number - 2 * 10 );
-    }
-    else if (number >= 10) {
-        result = digit_to_speech (1) + digit_to_speech( number - 1 * 10 );
-    }
+    int secondDigit = number / 10;
+    result = digit_to_speech (secondDigit) +
+        digit_to_speech( number - secondDigit * 10) ;
     return (result + string ("base-5")).c_str();
 }
 TEST (DummyTest, DummyCase) {
