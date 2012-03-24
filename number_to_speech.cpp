@@ -14,11 +14,10 @@ const char *number_to_speech (int number) {
         result = std::string( "three " ) + result;
     else if (number == 4)
         result = std::string( "four " ) + result;
-     else if (number >= 20) {
+    else if (number >= 20) {
       result = std::string( "two " ) + std::string( number_to_speech( number - 20 ));
     }   
-   
-   else if (number >= 10) {
+    else if (number >= 10) {
       result = std::string( "one " ) + std::string( number_to_speech( number - 10 ));
     }
      return result.c_str();
@@ -36,6 +35,7 @@ TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("one four base-5", number_to_speech(14));
     EXPECT_STREQ ("two zero base-5", number_to_speech(20));
     EXPECT_STREQ ("two one base-5", number_to_speech(21));
+    EXPECT_STREQ ("three zero base-5", number_to_speech(30));
 }
 
 int main (int argc, char *argv[])
