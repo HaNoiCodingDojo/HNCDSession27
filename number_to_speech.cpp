@@ -17,22 +17,7 @@ const char *number_to_speech (int number) {
 
     else if (number >= 10) {
       result = std::string( number_to_speech( number - 10 ));
-    if (number == 10)
-       {
-           result = std::string( "one " ) + result;
-       }
-    else if (number == 12)
-        {
-            result = std::string( "one " ) + result;
-        }
-    else if (number == 13)
-        {
-            result = std::string( "one " ) + result;
-        }
-    else if (number == 14)
-        {
-            result = std::string( "one " ) + result;
-        }
+      result = std::string( "one " ) + result;
     }
        
      return result.c_str();
