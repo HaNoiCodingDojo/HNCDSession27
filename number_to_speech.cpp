@@ -3,34 +3,36 @@
 #include <string>
 
 const char *number_to_speech (int number) {
+    std::string result = "base-5";
     if (number == 0)
-        return "zero base-5";
+        result = std::string( "zero " ) + result;
     else if (number == 1)
-        return "one base-5";
+        result = std::string( "one " ) + result;
     else if (number == 2)
-
-        return "two base-5";
+        result = std::string( "two " ) + result;
     else if (number == 3)
-        return "three base-5";
+        result = std::string( "three " ) + result;
     else if (number == 4)
-        return "four base-5";
+        result = std::string( "four " ) + result;
     
     else if (number == 10)
        {
-           return "one zero base-5";
+           result = std::string( "one zero " ) + result;
        }
     else if (number == 12)
         {
-            return "one two base-5";
+            result = std::string( "one two " ) + result;
         }
     else if (number == 13)
         {
-            return "one three base-5";
+            result = std::string( "one three " ) + result;
         }
     else if (number == 14)
         {
-            return "one four base-5";
+            result = std::string( "one four " ) + result;
         }
+       
+     return result.c_str();
 }
 
 TEST (DummyTest, DummyCase) {
