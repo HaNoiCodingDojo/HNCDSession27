@@ -5,7 +5,7 @@
 using namespace std;
 
 string digit_to_speech (int number) {
-    string result = "base-5";
+    string result = "";
     if (number == 0)
         result = string( "zero " ) + result;
     else if (number == 1)
@@ -35,7 +35,7 @@ const char *number_to_speech (int number) {
     else if (number >= 10) {
         result = string( "one " ) + string( number_to_speech( number - 10 ));
     }
-    return result.c_str();
+    return (result + string ("base-5")).c_str();
 }
 TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("zero base-5", number_to_speech (0));
