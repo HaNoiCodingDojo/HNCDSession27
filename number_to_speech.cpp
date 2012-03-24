@@ -20,6 +20,7 @@ string digit_to_speech (int number) {
 }
 
 const char *number_to_speech (int number) {
+    string result = "";
     if (number < 10)
         result = digit_to_speech (number);
     else if (number >= 40) {
