@@ -2,32 +2,34 @@
 #include "gtest/gtest.h"
 #include <string>
 
+using namespace std;
+
 const char *number_to_speech (int number) {
-    std::string result = "base-5";
+    string result = "base-5";
     if (number == 0)
-        result = std::string( "zero " ) + result;
+        result = string( "zero " ) + result;
     else if (number == 1)
-        result = std::string( "one " ) + result;
+        result = string( "one " ) + result;
     else if (number == 2)
-        result = std::string( "two " ) + result;
+        result = string( "two " ) + result;
     else if (number == 3)
-        result = std::string( "three " ) + result;
+        result = string( "three " ) + result;
     else if (number == 4)
-        result = std::string( "four " ) + result;
+        result = string( "four " ) + result;
       else if (number >= 40) {
-      result = std::string( "four " ) + std::string( number_to_speech( number - 40 ));
+      result = string( "four " ) + string( number_to_speech( number - 40 ));
       }
          else if (number >= 30) {
-      result = std::string( "three " ) + std::string( number_to_speech( number - 30 ));
+      result = string( "three " ) + string( number_to_speech( number - 30 ));
       
     
      }
  
     else if (number >= 20) {
-      result = std::string( "two " ) + std::string( number_to_speech( number - 20 ));
+      result = string( "two " ) + string( number_to_speech( number - 20 ));
     }   
     else if (number >= 10) {
-      result = std::string( "one " ) + std::string( number_to_speech( number - 10 ));
+      result = string( "one " ) + string( number_to_speech( number - 10 ));
     }
      return result.c_str();
 }
