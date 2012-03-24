@@ -14,6 +14,9 @@ const char *number_to_speech (int number) {
         result = std::string( "three " ) + result;
     else if (number == 4)
         result = std::string( "four " ) + result;
+      else if (number >= 40) {
+      result = std::string( "four " ) + std::string( number_to_speech( number - 40 ));
+      }
          else if (number >= 30) {
       result = std::string( "three " ) + std::string( number_to_speech( number - 30 ));
       
