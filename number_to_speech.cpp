@@ -23,10 +23,10 @@ const char *number_to_speech (int number) {
     string result = "";
     if (number < 10)
         result = digit_to_speech (number);
-
+    else {
     int secondDigit = number / 10;
     result = digit_to_speech (secondDigit) +
-        digit_to_speech( number - secondDigit * 10) ;
+        digit_to_speech( number - secondDigit * 10) ; }
     return (result + string ("base-5")).c_str();
 }
 TEST (DummyTest, DummyCase) {
