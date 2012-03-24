@@ -16,21 +16,22 @@ const char *number_to_speech (int number) {
         result = std::string( "four " ) + result;
 
     else if (number >= 10) {
+      result = std::string( number_to_speech( number - 10 );
     if (number == 10)
        {
-           result = std::string( "one zero " ) + result;
+           result = std::string( "one " ) + result;
        }
     else if (number == 12)
         {
-            result = std::string( "one two " ) + result;
+            result = std::string( "one " ) + result;
         }
     else if (number == 13)
         {
-            result = std::string( "one three " ) + result;
+            result = std::string( "one " ) + result;
         }
     else if (number == 14)
         {
-            result = std::string( "one four " ) + result;
+            result = std::string( "one " ) + result;
         }
     }
        
