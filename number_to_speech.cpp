@@ -22,7 +22,7 @@ const char *number_to_speech (int number) {
       
     
      }
-
+ 
     else if (number >= 20) {
       result = std::string( "two " ) + std::string( number_to_speech( number - 20 ));
     }   
@@ -45,6 +45,7 @@ TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("two one base-5", number_to_speech(21));
     EXPECT_STREQ ("three zero base-5", number_to_speech(30));
     EXPECT_STREQ ("four zero base-5", number_to_speech(40));
+    EXPECT_STREQ ("four one base-5", number_to_speech(41));
 }
 
 int main (int argc, char *argv[])
