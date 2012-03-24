@@ -28,13 +28,13 @@ const char *number_to_speech (int number) {
         result = digit_to_speech (4) + digit_to_speech( number - 4 * 10 );
     }
     else if (number >= 30) {
-        result = string( "three " ) + string( digit_to_speech( number - 30 ));
+        result = digit_to_speech (3) + digit_to_speech( number - 3 * 10 );
     }
     else if (number >= 20) {
-        result = string( "two " ) + string( digit_to_speech( number - 20 ));
+        result = digit_to_speech (2) + digit_to_speech( number - 2 * 10 );
     }
     else if (number >= 10) {
-        result = string( "one " ) + string( digit_to_speech( number - 10 ));
+        result = digit_to_speech (1) + digit_to_speech( number - 1 * 10 );
     }
     return (result + string ("base-5")).c_str();
 }
