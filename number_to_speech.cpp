@@ -23,8 +23,9 @@ const char *number_to_speech (int number) {
     string result = "";
     if (number < 10)
         result = digit_to_speech (number);
+
     else if (number >= 40) {
-        result = string( "four " ) + string( digit_to_speech( number - 40 ));
+        result = digit_to_speech (4) + digit_to_speech( number - 4 * 10 );
     }
     else if (number >= 30) {
         result = string( "three " ) + string( digit_to_speech( number - 30 ));
