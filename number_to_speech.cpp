@@ -27,6 +27,10 @@ const char *number_to_speech (int number) {
         {
             return "one three base-5";
         }
+    else if (number == 14)
+        {
+            return "one four base-5";
+        }
 }
 
 TEST (DummyTest, DummyCase) {
