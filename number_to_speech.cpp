@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const char *number_to_speech (int number) {
+string digit_to_speech (int number) {
     string result = "base-5";
     if (number == 0)
         result = string( "zero " ) + result;
@@ -16,6 +16,12 @@ const char *number_to_speech (int number) {
         result = string( "three " ) + result;
     else if (number == 4)
         result = string( "four " ) + result;
+    return result;
+}
+
+const char *number_to_speech (int number) {
+    if (number < 10)
+        result = digit_to_speech (number);
     else if (number >= 40) {
         result = string( "four " ) + string( number_to_speech( number - 40 ));
     }
