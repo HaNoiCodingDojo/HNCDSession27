@@ -3,7 +3,10 @@
 #include <string>
 
 const char *number_to_speech (int number) {
-    return "zero base-5";
+    if (number == 0)
+        return "zero base-5";
+    else
+        return "one base-5";
 }
 
 TEST (DummyTest, DummyCase) {
