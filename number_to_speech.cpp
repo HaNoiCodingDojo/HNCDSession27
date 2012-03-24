@@ -14,12 +14,13 @@ const char *number_to_speech (int number) {
         result = std::string( "three " ) + result;
     else if (number == 4)
         result = std::string( "four " ) + result;
+     else if (number >= 20) {
+      result = std::string( "two " ) + std::string( number_to_speech( number - 20 ));
+    }   
+   
     else if (number >= 10) {
       result = std::string( "one " ) + std::string( number_to_speech( number - 10 ));
     }
-    else if (number >= 20) {
-      result = std::string( "two " ) + std::string( number_to_speech( number - 20 ));
-    }   
      return result.c_str();
 }
 
