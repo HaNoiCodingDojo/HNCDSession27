@@ -14,6 +14,7 @@ const char *number_to_speech (int number) {
         return "three base-5";
     else if (number == 4)
         return "four base-5";
+    
     else if (number == 10)
        {
            return "one zero base-5";
@@ -32,6 +33,7 @@ TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("four base-5",  number_to_speech (4));
     EXPECT_STREQ ("one zero base-5", number_to_speech(10) ); 
     EXPECT_STREQ ("one two base-5", number_to_speech(12));
+    EXPECT_STREQ ("one three base-5", number_to_speech(13));
 }
 
 int main (int argc, char *argv[])
