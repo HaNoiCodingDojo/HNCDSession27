@@ -17,19 +17,18 @@ const char *number_to_speech (int number) {
     else if (number == 4)
         result = string( "four " ) + result;
     else if (number >= 40) {
-      result = string( "four " ) + string( number_to_speech( number - 40 ));
+        result = string( "four " ) + string( number_to_speech( number - 40 ));
     }
     else if (number >= 30) {
-      result = string( "three " ) + string( number_to_speech( number - 30 ));
+        result = string( "three " ) + string( number_to_speech( number - 30 ));
     }
- 
     else if (number >= 20) {
-      result = string( "two " ) + string( number_to_speech( number - 20 ));
-    }   
-    else if (number >= 10) {
-      result = string( "one " ) + string( number_to_speech( number - 10 ));
+        result = string( "two " ) + string( number_to_speech( number - 20 ));
     }
-     return result.c_str();
+    else if (number >= 10) {
+        result = string( "one " ) + string( number_to_speech( number - 10 ));
+    }
+    return result.c_str();
 }
 TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("zero base-5", number_to_speech (0));
