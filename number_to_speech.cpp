@@ -27,7 +27,7 @@ const char *number_to_speech (int number) {
     int secondDigit = number / 10;
     result = digit_to_speech (secondDigit) +
         digit_to_speech( number - secondDigit * 10) ;
-    return (result + string ("base-5")).c_str();
+    return (result + string (" base-5")).c_str();
 }
 TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("zero base-5", number_to_speech (0));
