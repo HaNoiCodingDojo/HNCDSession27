@@ -16,7 +16,7 @@ const char *number_to_speech (int number) {
         result = std::string( "four " ) + result;
 
     else if (number >= 10) {
-      result = std::string( number_to_speech( number - 10 );
+      result = std::string( number_to_speech( number - 10 ));
     if (number == 10)
        {
            result = std::string( "one " ) + result;
