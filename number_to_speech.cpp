@@ -24,16 +24,16 @@ const char *number_to_speech (int number) {
     if (number < 10)
         result = digit_to_speech (number);
     else if (number >= 40) {
-        result = string( "four " ) + string( number_to_speech( number - 40 ));
+        result = string( "four " ) + string( digit_to_speech( number - 40 ));
     }
     else if (number >= 30) {
-        result = string( "three " ) + string( number_to_speech( number - 30 ));
+        result = string( "three " ) + string( digit_to_speech( number - 30 ));
     }
     else if (number >= 20) {
-        result = string( "two " ) + string( number_to_speech( number - 20 ));
+        result = string( "two " ) + string( digit_to_speech( number - 20 ));
     }
     else if (number >= 10) {
-        result = string( "one " ) + string( number_to_speech( number - 10 ));
+        result = string( "one " ) + string( digit_to_speech( number - 10 ));
     }
     return (result + string ("base-5")).c_str();
 }
