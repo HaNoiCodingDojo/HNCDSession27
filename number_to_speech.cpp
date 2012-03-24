@@ -26,7 +26,7 @@ const char *number_to_speech (int number) {
     else {
     int secondDigit = number / 10;
     result = digit_to_speech (secondDigit) +
-        digit_to_speech( number - secondDigit * 10) ; }
+        digit_to_speech( number - secondDigit * 10) ; } 
     return (result + string ("base-5")).c_str();
 }
 TEST (DummyTest, DummyCase) {
@@ -44,6 +44,8 @@ TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("three zero base-5", number_to_speech(30));
     EXPECT_STREQ ("four zero base-5", number_to_speech(40));
     EXPECT_STREQ ("four one base-5", number_to_speech(41));
+    EXPECT_STREQ ("four one two base-5", number_to_speech(412));
+    
 }
 
 int main (int argc, char *argv[])
