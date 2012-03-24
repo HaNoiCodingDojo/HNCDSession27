@@ -8,6 +8,7 @@ const char *number_to_speech (int number) {
 
 TEST (DummyTest, DummyCase) {
     EXPECT_STREQ ("zero base-5", number_to_speech (0));
+    EXPECT_STREQ ("one base-5",  number_to_speech (1));
 }
 
 int main (int argc, char *argv[])
