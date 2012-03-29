@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/number_to_speech.dir/number_to_speech.cpp.o  -o number_to_speech -rdynamic -lgtest 
